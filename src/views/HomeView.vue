@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import Block from '../components/TheBlock.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <Block />
 </template>
