@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import BlockItem from './BlockItem.vue'
+import type { Media } from '../types/type'
 
-const posts = ref([
-  { id: 1, title: 'My journey with Vue' },
-  { id: 2, title: 'Blogging with Vue' },
-  { id: 3, title: 'Why Vue is so fun' },
-])
+defineProps<{
+  medias: Media[]
+}>()
 </script>
 
 <template>
   <div class="row">
     <BlockItem
-      v-for="post in posts"
-      :key="post.id"
-      :title="post.title"
-    ></BlockItem>
+      v-for="media in medias"
+      :key="media.mediaId"
+      :title="media.popularity"
+      :content="media.trending"
+    />
   </div>
 </template>
+
 <style>
 .row {
   display: flex;

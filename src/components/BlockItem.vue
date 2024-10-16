@@ -1,7 +1,12 @@
 <script setup lang="ts">
-defineProps(['title'])
+const props = defineProps<{
+  title: number
+  content: number
+}>()
 </script>
 
 <template>
-  <div class="item">{{ title }}</div>
+  <div class="item">
+    popularity: {{ props.title }} trending: {{ props.content }}
+  </div>
 </template>
